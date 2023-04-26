@@ -95,3 +95,16 @@ body {
 .scoreBoard span.active {
     border-bottom: 4px solid #F286A0;
 }
+
+.enter_name {               /*Se cambian las caracteristicas del texto, haciendolo mas grande alineandolo al centro y cambiandole de color al negro*/  
+    text-align: center;
+    color: black;
+    font-size: 400%;
+}
+
+.row1 {                     /*Utilizando la clase row cambiamos la posicion del div entero para centrarlo un poco mas*/
+    position: absolute;
+    top: 35%;
+    right: 10%;
+    left: 10%;
+}
