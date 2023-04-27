@@ -7,7 +7,6 @@ class Board {
         this.cells = [];
         this.players = [];
         this.ready = false;   
-        
         this.createTable();
     }
 
@@ -110,6 +109,7 @@ class Board {
         if (this.ready && target.getAttribute('data-intent') === 'gameCell' && 
         		target.getAttribute('active') === 'true') {
             this.onMark(this.cells.indexOf(target));
+            target.style.backgroundColor = "White";  //Las celdas activas de cada jugador adquieren un fondo blanco
             this.disableAll();
         }
     }
@@ -119,6 +119,12 @@ class Board {
         cell.textContent = label;
         cell.classList.add('notActive');
         cell.setAttribute('marked', 'true');
+        if (cell.textContent == "X"){
+            cell.style.backgroundImage = "url('/js/equis.png')"; 
+        }
+        if (cell.textContent == "O"){
+            cell.style.backgroundImage = "url('/js/o.png')";
+        }
     }
 
     doWinner(winner, pos) {

@@ -75,6 +75,7 @@ body {
 .gameBoard td.gameCell.notActive:hover, .gameBoard td.gameCell.notActive:active {
     box-shadow: none !important;
     cursor: default;
+    background-color: red;     /**Al pasar el cursor sobre celdas inactivas, éstas adobtarán un fondo rojo**/
 }
 
 .scoreBoard {
