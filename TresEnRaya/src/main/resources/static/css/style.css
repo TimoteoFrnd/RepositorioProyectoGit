@@ -98,8 +98,9 @@ body {
 
 .enter_name {               /*Se cambian las caracteristicas del texto, haciendolo mas grande alineandolo al centro y cambiandole de color al negro*/  
     text-align: center;
-    color: black;
+    color: #00eeff;
     font-size: 400%;
+    text-shadow: 0 0 8px #00ffff;
 }
 
 .row1 {                     /*Utilizando la clase row cambiamos la posicion del div entero para centrarlo un poco mas*/
@@ -108,3 +109,4 @@ body {
     right: 10%;
     left: 10%;
 }
+

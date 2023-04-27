@@ -3288,16 +3288,17 @@ output {
 }
 
 .form-control {
+    background-color: transparent;
     display: block;
     width: 100%;
     height: 34px;
     padding: 6px 12px;
     font-size: 14px;
     line-height: 1.42857143;
-    color: #000000;                 /*Cambio de color de la entrada de texto*/
-    background-color: #b33131;      /*Cambio de color*/
+    color: #00f5fd;                 /*Cambio de color de la entrada de texto*/
+    /*background-color: #b33131;      /*Cambio de color*/
     background-image: none;
-    border: 1px solid #c92828;      /*Cambio de color*/
+   /* border: 1px solid #c92828;      /*Cambio de color*/
     border-radius: 4px;
     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
@@ -4113,9 +4114,9 @@ fieldset[disabled] .btn-warning:hover {
 }
 
 .btn-danger {                       /*Se cambia el color tanto del background como del border*/
-    color: #000000;
-    background-color: #720000bb;
-    border-color: #720000bb
+    color: #fff;
+    background-color: #00eeff;
+    border-color: #00eeff
 }
 
 .btn-danger.active,
@@ -4125,8 +4126,8 @@ fieldset[disabled] .btn-warning:hover {
 .btn-danger:hover,
 .open>.dropdown-toggle.btn-danger {
     color: #fff;
-    background-color: #720000bb;
-    border-color: #720000bb
+    background-color: #00eeff;
+    border-color: #00eeff
 }
 
 .btn-danger.active,
@@ -6568,15 +6569,15 @@ a.list-group-item-danger.active:hover {
 
 .panel {
     margin-bottom: 20px;
-    background-color: #fff;
+   /* background-color: #fff; */
     border: 1px solid transparent;
     border-radius: 4px;
-    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
-    box-shadow: 0 1px 1px rgba(0, 0, 0, .05)
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .05) 
 }
 
 .panel-body { 
-    background-color: rgb(71, 71, 71);           /*Se baja el padding a 1%*/
+   /* background-color: rgb(71, 71, 71);           /*Se baja el padding a 1%*/
     padding: 1%
 }
 
