@@ -34,6 +34,8 @@ class Board {
         cell.setAttribute('marked', 'false');
         cell.setAttribute('data-intent', 'gameCell');
 
+        
+
         for (let i = 0; i < 9; i++) {
         	let newCell = cell.cloneNode(true);
         	newCell.setAttribute('id', 'cell-'+i);
@@ -56,6 +58,8 @@ class Board {
             }
         }
     }
+
+    
 
     addTable(container) {
         container.appendChild(this.table);
