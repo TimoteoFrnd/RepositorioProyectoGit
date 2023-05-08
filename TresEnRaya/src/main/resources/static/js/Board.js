@@ -177,7 +177,7 @@ class Board {
                 let score = this.scoreBoard[this.players.length - 1];
 
                 if (this.players.length === 1) {
-                	score.textContent = player.label + ' ' + player.name;
+                	score.textContent =  player.label + ' ' + player.name;
                 } else {
                 	score.textContent = player.name + ' ' + player.label;
                 }
