@@ -119,8 +119,8 @@ class Board {
         
         cell.classList.add('notActive');
         cell.setAttribute('marked', 'true');
-        if (label == "X"){
-            cell.style.backgroundImage = "url('/js/equis.png')"; 
+        if (label == "X"){                                                             // al marcar una casilla se mostraran dos imágenes distintas,
+            cell.style.backgroundImage = "url('/js/equis.png')";                       // una imagen para el primer jugador(X) y otra para el sehundo (O).
         }
         if (label == "O"){
             cell.style.backgroundImage = "url('/js/Oo.png')";
@@ -135,15 +135,19 @@ class Board {
     	} else {
     		looser = this.players[0].name;
     	}
-    	
-    	alert(winner+" wins! "+looser+" looses.");
+
+        let p = document.getElementById("ganadores");
+        p.innerHTML = winner + " le ha ganado a " + looser;               // al ganr uno de los dos jugador se muestra texto en el HTML en vez de un alert, igual con los empates.
+        p.style.display = "block";
     	
     	this.disableAll();
         this.highlightCells(pos);
     }
 
     doDraw() {
-    	alert("Draw!");
+        let p = document.getElementById("ganadores");
+        p.innerHTML = "Empate";
+        p.style.display = "block";
         this.lowlightCells();
     }
 

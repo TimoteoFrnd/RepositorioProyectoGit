@@ -98,3 +98,14 @@ body {
 .scoreBoard span.active {
     border-bottom: 4px solid #F286A0;
 }
+
+#ganadores{
+position: absolute;
+width: 100%;
+height: 30%;
+bottom: 0%;
+color: white;
+font-size:50px;
+text-align: center;
+display:none;
+}
