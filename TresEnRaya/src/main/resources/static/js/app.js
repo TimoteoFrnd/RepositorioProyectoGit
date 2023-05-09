@@ -137,6 +137,8 @@ function start(){
 startBtn.addEventListener('click', event => {
     
 	var name = nameInput.value.trim();
+	let bot = document.getElementById("reiniciar");
+	bot.style.display = "block";
 
     if (name.length > 0) {
         player.name = name;
