@@ -92,6 +92,7 @@ class Board {
         
         for (let i of positions) {
         	this.cells[i].classList.add('colorRed');
+            this.cells[i].style.backgroundColor="rgb(43, 248, 46)";    // el fondo de las casillas marcadas por el ganador adquieren un fondo verde
         }
 
         for (let cell of this.cells) {
@@ -143,6 +144,7 @@ class Board {
         let p = document.getElementById("ganadores");
         p.innerHTML = winner + " le ha ganado a " + looser;               // al ganr uno de los dos jugador se muestra texto en el HTML en vez de un alert, igual con los empates.
         p.style.display = "block";
+        p.style.backgroundColor="green";
     	
     	this.disableAll();
         this.highlightCells(pos);
@@ -152,6 +154,7 @@ class Board {
         let p = document.getElementById("ganadores");
         p.innerHTML = "Empate";
         p.style.display = "block";
+        p.style.backgroundColor="green";
         this.lowlightCells();
     }
 
