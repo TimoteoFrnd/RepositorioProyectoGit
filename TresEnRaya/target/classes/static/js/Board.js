@@ -149,7 +149,7 @@ class Board {
     	}
 
         let p = document.getElementById("ganadores");
-        p.innerHTML = winner + " le ha ganado a " + looser;               // al ganr uno de los dos jugador se muestra texto en el HTML en vez de un alert, igual con los empates.
+        p.innerHTML = winner + " le ha ganado a " + looser;               // al ganar uno de los dos jugador se muestra texto en el HTML en vez de un alert, igual con los empates.
         p.style.display = "block";
         p.style.backgroundColor="green";
     	
