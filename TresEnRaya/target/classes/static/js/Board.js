@@ -115,10 +115,16 @@ class Board {
     }
 
     doMark(cellId, label) {
+        
+        //Agregamos un sonido diferente para cada jugador
+        const audioElement = document.getElementById("audiox1");
+        audioElement.play();
+        
         let cell = this.cells[cellId];
         cell.textContent = label;
         cell.classList.add('notActive');
         cell.setAttribute('marked', 'true');
+
     }
 
     doWinner(winner, pos) {
