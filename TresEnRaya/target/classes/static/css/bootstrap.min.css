@@ -3288,8 +3288,10 @@ output {
 }
 
 .form-control {
+
     background-color: transparent;
     text-align: center;               /*Alineamos el texto para que al indicar el nombre del jugador salga en el centro*/
+
     display: block;
     width: 100%;
     height: 34px;
@@ -3300,6 +3302,7 @@ output {
     /*background-color: #b33131;      /*Cambio de color*/
     background-image: none;
    /* border: 1px solid #c92828;      /*Cambio de color*/
+
     border-radius: 4px;
     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
@@ -4113,6 +4116,7 @@ fieldset[disabled] .btn-warning:hover {
     color: #f0ad4e;
     background-color: #fff
 }
+
 
 .btn-danger {                       /*Se cambia el color tanto del background como del border*/
     color: #fff;
