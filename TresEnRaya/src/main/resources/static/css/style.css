@@ -23,6 +23,13 @@ body {
     font-family: Quicksand, san-serif;
 }
 
+.title1 {
+
+    left: 50%;
+    position: relative;
+
+}
+
 .bgWhite {
     background: #F5F2F5;
 }

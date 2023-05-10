@@ -137,6 +137,10 @@ function start(){
 startBtn.addEventListener('click', event => {
     
 	var name = nameInput.value.trim();
+	const audioElement = document.getElementById("audio");
+
+// Iniciar la reproducción del audio
+audioElement.play();
 
     if (name.length > 0) {
         player.name = name;
