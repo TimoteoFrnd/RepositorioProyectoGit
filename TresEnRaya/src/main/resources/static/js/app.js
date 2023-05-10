@@ -137,10 +137,13 @@ function start(){
 startBtn.addEventListener('click', event => {
     
 	var name = nameInput.value.trim();
+
 	const audioElement = document.getElementById("audio");
+  audioElement.play();
 
+	let bot = document.getElementById("reiniciar");
+	bot.style.display = "block";
 
-audioElement.play();
 
     if (name.length > 0) {
         player.name = name;
