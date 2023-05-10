@@ -120,7 +120,7 @@ body {
 
 .row1 {                     /*Utilizando la clase row cambiamos la posicion del div entero para centrarlo un poco mas*/
     position: absolute;
-    top: 35%;
+    top: 15%;
     right: 10%;
     left: 10%;
 }
