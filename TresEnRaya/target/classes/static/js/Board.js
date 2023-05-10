@@ -7,7 +7,6 @@ class Board {
         this.cells = [];
         this.players = [];
         this.ready = false;   
-        
         this.createTable();
     }
 
@@ -35,6 +34,8 @@ class Board {
         cell.setAttribute('marked', 'false');
         cell.setAttribute('data-intent', 'gameCell');
 
+        
+
         for (let i = 0; i < 9; i++) {
         	let newCell = cell.cloneNode(true);
         	newCell.setAttribute('id', 'cell-'+i);
@@ -57,6 +58,8 @@ class Board {
             }
         }
     }
+
+    
 
     addTable(container) {
         container.appendChild(this.table);
@@ -89,6 +92,7 @@ class Board {
         
         for (let i of positions) {
         	this.cells[i].classList.add('colorRed');
+            this.cells[i].style.backgroundColor="rgb(43, 248, 46)";    // el fondo de las casillas marcadas por el ganador adquieren un fondo verde
         }
 
         for (let cell of this.cells) {
@@ -110,15 +114,22 @@ class Board {
         if (this.ready && target.getAttribute('data-intent') === 'gameCell' && 
         		target.getAttribute('active') === 'true') {
             this.onMark(this.cells.indexOf(target));
+            target.style.backgroundColor = "White";  //Las celdas activas de cada jugador adquieren un fondo blanco
             this.disableAll();
         }
     }
 
     doMark(cellId, label) {
         let cell = this.cells[cellId];
-        cell.textContent = label;
+        
         cell.classList.add('notActive');
         cell.setAttribute('marked', 'true');
+        if (label == "X"){                                                             // al marcar una casilla se mostraran dos imágenes distintas,
+            cell.style.backgroundImage = "url('/js/equis.png')";                       // una imagen para el primer jugador(X) y otra para el sehundo (O).
+        }
+        if (label == "O"){
+            cell.style.backgroundImage = "url('/js/Oo.png')";
+        }
     }
 
     doWinner(winner, pos) {
@@ -129,15 +140,21 @@ class Board {
     	} else {
     		looser = this.players[0].name;
     	}
-    	
-    	alert(winner+" wins! "+looser+" looses.");
+
+        let p = document.getElementById("ganadores");
+        p.innerHTML = winner + " le ha ganado a " + looser;               // al ganr uno de los dos jugador se muestra texto en el HTML en vez de un alert, igual con los empates.
+        p.style.display = "block";
+        p.style.backgroundColor="green";
     	
     	this.disableAll();
         this.highlightCells(pos);
     }
 
     doDraw() {
-    	alert("Draw!");
+        let p = document.getElementById("ganadores");
+        p.innerHTML = "Empate";
+        p.style.display = "block";
+        p.style.backgroundColor="green";
         this.lowlightCells();
     }
 
@@ -163,7 +180,7 @@ class Board {
                 let score = this.scoreBoard[this.players.length - 1];
 
                 if (this.players.length === 1) {
-                	score.textContent = player.label + ' ' + player.name;
+                	score.textContent =  player.label + ' ' + player.name;
                 } else {
                 	score.textContent = player.name + ' ' + player.label;
                 }

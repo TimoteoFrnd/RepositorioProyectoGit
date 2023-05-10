@@ -66,6 +66,8 @@ body {
 .gameCell {
     width: 181px;
     height: 181px;
+    background-repeat: no-repeat;    /**Impedimos que se repita la imagen del fondo al marcar la casilla **/
+    background-position: center;     /**Centramos la imagen del fondo**/
 }
 
 .gameCell:not(.marked):hover {
@@ -75,6 +77,7 @@ body {
 .gameBoard td.gameCell.notActive:hover, .gameBoard td.gameCell.notActive:active {
     box-shadow: none !important;
     cursor: default;
+    background-color: red;     /**Al pasar el cursor sobre celdas inactivas, éstas adobtarán un fondo rojo**/
 }
 
 .scoreBoard {
@@ -94,4 +97,21 @@ body {
 
 .scoreBoard span.active {
     border-bottom: 4px solid #F286A0;
+}
+
+#ganadores{
+position: absolute;
+width: 100%;
+height: 10%;
+bottom: 1%;
+color: white;
+font-size:50px;
+text-align: center;
+display:none;
+}
+#reiniciar{
+    display:none; 
+    position:absolute; 
+    right:10%; 
+    top:20%;
 }
