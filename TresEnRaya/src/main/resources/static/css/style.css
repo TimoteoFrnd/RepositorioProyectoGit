@@ -28,6 +28,13 @@ body {
     background-size: 100%;
 }
 
+.title1 {
+
+    left: 50%;
+    position: relative;
+
+}
+
 .bgWhite {
     background: #F5F2F5;
 }

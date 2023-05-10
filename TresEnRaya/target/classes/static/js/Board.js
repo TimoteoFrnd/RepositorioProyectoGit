@@ -120,16 +120,23 @@ class Board {
     }
 
     doMark(cellId, label) {
+        
+        //Agregamos un sonido diferente para cada jugador
+        const audioElement = document.getElementById("audiox1");
+        audioElement.play();
+        
         let cell = this.cells[cellId];
         
         cell.classList.add('notActive');
         cell.setAttribute('marked', 'true');
+
         if (label == "X"){                                                             // al marcar una casilla se mostraran dos imágenes distintas,
             cell.style.backgroundImage = "url('/js/equis.png')";                       // una imagen para el primer jugador(X) y otra para el sehundo (O).
         }
         if (label == "O"){
             cell.style.backgroundImage = "url('/js/Oo.png')";
         }
+
     }
 
     doWinner(winner, pos) {
